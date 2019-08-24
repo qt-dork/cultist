@@ -1,0 +1,97 @@
+Name,Description,Requirements,Script
+Weaken Spell,Ignore Shields,,inflictself(PIERCE);
+Recycle,Reuse all equipment,,inflictself(RECYCLE);
+Fury,Double next action,,inflictself(FURY);
+Firebomb,Do [fire]8 fire damage,,attack(8|FIRE);
+Infinite Dice,Get more dice,,inflictself(~infinite~);
+Magic Dice,Roll an extra dice,,givedice();
+Focus,All dice become 6,,var c = 0; for (mydice in self.dicepool){ if (mydice.available()){ mydice.animatereroll(6| self.screenposition()| c * 0.05); c++; } }
+Reroll,Reroll unused dice,,var c = 0; for (mydice in self.dicepool){ if (mydice.available()){ mydice.animatereroll(rand([1|2|3|4|5|6])| self.screenposition()| c * 0.05); c++; } }
+Rage,Roll 2 dice[;] -5[heart],health|2,givedice([rand([1|2|3|4|5|6])|rand([1|2|3|4|5|6])]); pierceattackself(5);
+Dexterity,Keep dice after attack,,inflictself(~dexterity~);
+Emetic,Cures Poison,,removestatusself(POISON|ALL);
+Flashbang,Shocks enemy,,inflict(SHOCK);
+Hook,Reuse next equipment,,inflictself(REEQUIPNEXT);
+Overdrive,99 to all counts,,boostcountdowns(99);
+Teleport,Evade next attack,,inflictself(DODGE);
+Meganudge,[]-1 to all dice,,var c = 0; for (mydice in self.dicepool){ if (mydice.available() && mydice.basevalue > 1){ mydice.animatereroll((mydice.basevalue - 1)| self.screenposition()| c * 0.05); c++; } }
+Megabump,[]+1 to all dice,,var c = 0; var extradice = []; for (mydice in self.dicepool){ if (mydice.available()){ if (mydice.basevalue >= 6){ extradice.push(1); mydice.animatereroll(6| self.screenposition()| c * 0.05); } else { mydice.animatereroll((mydice.basevalue + 1)| self.screenposition()| c * 0.05); } c++; } } givedice(extradice);
+Jetpack,Flee Immediately,,flee();
+Accelerate,6 to all counts,,boostcountdowns(6);
+Barricade,Shield +[shield]3,,inflictself(SHIELD|3);
+Jackhammer,Shock [shock]3 equipment,,inflict(SHOCK|3);
+Pea Gun,Do [sword]3 damage,,attack(3);
+Blowtorch,Do [fire]3 fire damage,,attack(3|FIRE);
+Clone Device,Duplicate all dice,,var dicelist = []; for (mydice in self.dicepool){ if (mydice.available()){ dicelist.push(mydice.basevalue); } } givedice(dicelist);
+Battle Wrench,Combine all dice,,var dicesum = 0; for (mydice in self.dicepool){ if (mydice.available()){ dicesum += mydice.basevalue; mydice.removedice(self.screenposition()); } } if(dicesum > 0) { givedice(dicesum); }
+Refrigerator,Freeze [ice]1 dice,,inflict(ICE);
+Protection,Reduce damage by [reduce]1,,inflictself(REDUCE);
+Regenerate,Heal [heal]3 health,,attackself(-3);
+Steal,Borrow equipment,spacetosteal|0,giveequipment(rand(getequipment(target)));
+Plasma Gun,Do [sword]5 damage,,attack(5);
+Unlucky Roll,Roll 4 extra 1s,,givedice([1|1|1|1]);
+Broomstick,Roll 3 extra dice,,givedice([rand([1|2|3|4|5|6])|rand([1|2|3|4|5|6])|rand([1|2|3|4|5|6])]);
+Burrower,[]Weaken [weaken]3,,inflict(WEAKEN|3);
+Bear Smash,Do [sword]10 damage,,attack(10);
+Robot Roll,Internal function when robot clicks roll,,robotroll();
+One More Roll,Roll one more dice,,robotroll();
+Autoroll,Jackpot guaranteed,,robotroll(true);
+Lucky Shot,Do [sword]5 damage,,attack(5);
+Crystal Ball,Roll 3 extra dice,,givedice([rand([1|2|3|4|5|6])|rand([1|2|3|4|5|6])|rand([1|2|3|4|5|6])]|~~|true);
+Match 3,Copy first card twice,,match3();
+Warrior Smash,Do [sword]6 damage,,attack(6);
+Magic Lockpick,Split a random dice,,var dicelist = []; for (mydice in self.dicepool){ if (mydice.available()){ dicelist.push(mydice); } } if(dicelist.length > 0) { var randdice = rand(dicelist); randdice.removedice(self.screenposition()); givedice(split(randdice.basevalue)); }
+Magic Trick,Discard current hand,,Deck.discardhand();
+Inspiration,Copy the next card,,//copynextcard
+Snake Eyes,Roll 2 ones,,givedice([1|1]);
+Heat Ray,Burn all dice,,inflict(FIRE|ALL);
+Jackpot,Jackpot guaranteed,,robotjackpot();
+Snap!,Matching cards can be used for free this turn,,Deck.snapstyle = ~cards~;
+Theremin,Do [weaken]3 damage,,attack(3|WEAKEN);
+Static Shock,Do [shock]3 damage,,attack(3|SHOCK);
+Mulligan,Undo this turn[;] and take it again,,undoturn(); inflictself(EXTRATURN); self.endturnnow();
+Very Unlucky Roll,Roll 2 extra 1s,,givedice([1|1]);
+Tantrum,Do [fire]4 fire damage,,attack(4|FIRE);
+Unfocused,Set all dice to the same random value,,var randvalue = random([1 | 2 | 3 | 4 | 5 | 6]); var c = 0; for (mydice in self.dicepool){ if (mydice.available()){ mydice.animatereroll(randvalue| self.screenposition()| c * 0.05); c++; } }
+Marble,Roll 2 extra dice,,givedice([rand([1|2|3|4|5|6])|rand([1|2|3|4|5|6])]|~~|true);
+Fury?,Double next action[;] but that equipment cannot be used next turn.,,inflictself(FURY);
+Unlucky Roll?,Roll between 2 and 5 extra 1s,,givedice(rand([[1|1]|[1|1|1]|[1|1|1|1]|[1|1|1|1|1]]));
+Broken Gadget,No effect,,
+Something Else,,,
+Slot Machine,Get random equipment,,var skillcard = null; for(e in self.equipment){ if(e.skillcard != ~~) skillcard = e; } replacemewith(rand(getequipment())|-1|skillcard);
+Reversal,Swap all equipment,,var myequipment = getequipment(self); var enemyequipment = getequipment(target); removeequipment(ALL|self); removeequipment(ALL|target); giveequipment(enemyequipment|false|false); giveenemyequipment(myequipment|false|false);
+Stardust,Random status effect,,inflict(rand([CURSE| LOCK| FIRE| ICE| WEAKEN| SHOCK| POISON]));
+Power Up,Gain a random blessing,,var randomstatus = rand([SHIELD|FURY|REDUCE|REEQUIPNEXT|DODGE]); var a = 1; if (randomstatus == SHIELD) a = 4; if (randomstatus == REDUCE) a = 2; inflictself(randomstatus | a);
+Poison Arrow,Inflict [poison]2 poison,,inflict(POISON| 2);
+Throw Dice,Do [sword]1 damage,,throwdice(self| target);
+Time Stop,Take an extra turn (once),,inflictself(EXTRATURN); Gadget.changegadget(self| ~Time Stop~| ~Broken Gadget~);
+Blood Sip,Drain [heart]2 health,,drain(2);
+Infinity Mirror,[]+1 dice this fight,,self.extradice++;
+Megaflip,Flip all dice upside down,,var c = 0; for (mydice in self.dicepool){ if (mydice.available()){ mydice.animatereroll((7 - mydice.basevalue)| self.screenposition()| c * 0.05); c++; } }
+Magic Six,Roll a six,,givedice(6);
+Bubble Gun,Do [sword]1 damage,,attack(1);
+Shuriken,Do [sword]4 damage,,attack(4);
+Catapult,Do [sword]9 damage,,attack(9);
+Dramatic Pause,Curse the enemy,,inflict(CURSE| 1);
+Quick Thinking,Gain [dodge]1 dodge,,inflictself(DODGE| 1);
+Random Roll,Reroll a random dice,,var availdice = []; for (mydice in self.dicepool){ if (mydice.available()){ availdice.push(mydice); } } if(availdice.length > 0) { shuffle(availdice); availdice[0].animatereroll(rand([1|2|3|4|5|6]) | self.screenposition());  }
+Arctic Storm,Freeze a random amount,,var r = rand([1|1|1|1|2|2|2|3|3|4|5]); inflict(ICE| r);
+Pillow Fort,Reduce by [reduce]2,,inflictself(REDUCE| 2);
+Zap,Inflict [shock]1 shock,,inflict(SHOCK| 1);
+Ember,Inflict [fire]1 burn,,inflict(FIRE| 1);
+Mumble,Inflict [weaken]1 weaken,,inflict(WEAKEN| 1);
+Needle,Gain [thorns]1 thorn,,inflictself(THORNS| 1);
+Efficiency,Gain [recycle]1 re-equip,,inflictself(REEQUIPNEXT| 1);
+Scream,Weaken a random amount,,var r = rand([1|1|1|1|2|2|2|3|3|4]); inflict(WEAKEN| r);
+Harvest,Gain [gold]1 gold (once),,self.gold += 1; Gadget.changegadget(self| ~Harvest~| ~Broken Gadget~);
+Overload,Double status effects,,var statuslist = [POISON|FIRE|SHOCK|ICE|WEAKEN|CURSE|BLIND|FURY|LOCK|SHIELD|REDUCE|DODGE|THORNS]; for(st in statuslist) { if(getstatus(st) > 0) { inflict(st| getstatus(st)); } if(getstatusself(st) > 0) { inflictself(st| getstatusself(st)); } }
+Dial Up Sounds,Inflict [weaken]5 weaken (once),,inflict(WEAKEN| 5); Gadget.changegadget(self| ~Dial Up Sounds~| ~Broken Gadget~);
+Magic Spanner,Combine random dice,,var firstattempt = false; var dicelist = []; for (mydice in self.dicepool){ if (mydice.available() && mydice.basevalue < 6){ dicelist.push(mydice); } } if(dicelist.length > 1) { shuffle(dicelist); dicelist[0].removedice(self.screenposition()); dicelist[1].removedice(self.screenposition()); givedice(dicelist[0].basevalue + dicelist[1].basevalue); firstattempt = true; } if(!firstattempt){ var dicelist = []; for (mydice in self.dicepool){ if (mydice.available()){ dicelist.push(mydice); } } if(dicelist.length > 1) { shuffle(dicelist); dicelist[0].removedice(self.screenposition()); dicelist[1].removedice(self.screenposition()); givedice(dicelist[0].basevalue + dicelist[1].basevalue); } }
+Replicate,Copy a random dice,,var dicelist = []; for (mydice in self.dicepool){ if (mydice.available()){ dicelist.push(mydice); } } if(dicelist.length > 0) { shuffle(dicelist); givedice(dicelist[0].basevalue); }
+Flash Freeze,Do [ice]4 ice damage,,attack(4| ICE);
+Oh No!,Inflict [shock] shock[;]|[fire] burn[;] and [ice] freeze,,inflict(SHOCK); inflict(ICE); inflict(FIRE); sfx(~_ice~); sfx(~_fire~);
+Hellfire,Burn a random amount,,var r = rand([1|1|1|1|2|2|2|3|3|4|5]); inflict(BURN| r);
+Still Standing,Gain survive[;] lose [heart]6,,inflictself(SURVIVE|1); pierceattackself(6);
+Against all odds,Roll 4 even dice,,givedice([rand([2|4|6])|rand([2|4|6])|rand([2|4|6])|rand([2|4|6])]|~~|false);
+Against all odds_old,Survive all fatal blows until the next turn,,inflictself(~againstallodds~|1);
+Trips,Roll three dice at the current uptick value,,var uptick = self.getvar(~uptick~); givedice([uptick|uptick|uptick]);

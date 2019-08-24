@@ -1,0 +1,21 @@
+Name,Displayed As,Symbol,Description,External Scripts?,Stacks?,Remove at End Turn?,Remove at Start Turn?,Invisible?
+permafrost,Permafrost,ice,Receive [ice]<value> freeze next turn.,NO,YES,NO,NO,NO
+block,Blocked,lock,Cannot use [lock]<value> dice next turn.,NO,YES,NO,NO,NO
+bonus,Bonus_Turn,confuse,Take an extra turn next turn.,NO,YES,NO,NO,NO
+damageup,Extra_Damage,extra,Deal [sword]<value> more damage with each hit.,NO,YES,NO,NO,NO
+bloodpact,Blood_Pact,heart,Damage dealt to you is also dealt to your opponent.,NO,YES,YES,NO,NO
+deathsoon,Death_is_Coming,curse,You will die in [curse]<value> turns.,NO,YES,NO,NO,NO
+blinddice,Blinded_Dice,blind,<value> dice are permanently blinded,NO,YES,NO,NO,NO
+dicelock_1,Dice_Lock_1,lock,You cannot roll a 1 for the rest of the fight.,NO,NO,NO,NO,NO
+dicelock_2,Dice_Lock_2,lock,You cannot roll a 2 for the rest of the fight.,NO,NO,NO,NO,NO
+dicelock_3,Dice_Lock_3,lock,You cannot roll a 3 for the rest of the fight.,NO,NO,NO,NO,NO
+dicelock_4,Dice_Lock_4,lock,You cannot roll a 4 for the rest of the fight.,NO,NO,NO,NO,NO
+dicelock_5,Dice_Lock_5,lock,You cannot roll a 5 for the rest of the fight.,NO,NO,NO,NO,NO
+dicelock_6,Dice_Lock_6,lock,You cannot roll a 6 for the rest of the fight.,NO,NO,NO,NO,NO
+split,Split!,dice,<value> dice are permanently split,NO,YES,NO,NO,NO
+heavyloaded_1,Heavily_Loaded_1,dice,All your dice are 1s!,NO,NO,NO,NO,NO
+heavyloaded_2,Heavily_Loaded_2,dice,All your dice are 2s!,NO,NO,NO,NO,NO
+heavyloaded_3,Heavily_Loaded_3,dice,All your dice are 3s!,NO,NO,NO,NO,NO
+heavyloaded_4,Heavily_Loaded_4,dice,All your dice are 4s!,NO,NO,NO,NO,NO
+heavyloaded_5,Heavily_Loaded_5,dice,All your dice are 5s!,NO,NO,NO,NO,NO
+heavyloaded_6,Heavily_Loaded_6,dice,All your dice are 6s!,NO,NO,NO,NO,NO
