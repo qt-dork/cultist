@@ -10,7 +10,7 @@ Name | Description
 --- | ---
 empty column| Doesn't take any dice. Usually used for passives.
 NORMAL | Will take any dice
-REQUIRESX | Will only accept dice of a specific value (i.e. REQUIRES1 will only accept 1s)
+REQUIREX | Will only accept dice of a specific value (i.e. REQUIRES1 will only accept 1s)
 MAXX | Will only accept dice of that specific value or less (i.e. MAX4 will only accept dice valued 4 or less)
 MINX | Will only accept dice of that specific value or more (i.e. MIN3 will only accept dice valued 3 or more)
 EVEN | Will only accept even-valued dice

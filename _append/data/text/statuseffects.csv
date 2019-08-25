@@ -20,3 +20,4 @@ heavyloaded_4,Heavily_Loaded_4,dice,All your dice are 4s!,NO,NO,NO,NO,NO
 heavyloaded_5,Heavily_Loaded_5,dice,All your dice are 5s!,NO,NO,NO,NO,NO
 heavyloaded_6,Heavily_Loaded_6,dice,All your dice are 6s!,NO,NO,NO,NO,NO
 stolen,Stolen_Dice,dice,You stole <value> dice!,NO,YES,NO,NO,YES
+smashed,Smashed!,sword,You've broken <value> of your equipment next turn!,NO,YES,NO,NO,NO

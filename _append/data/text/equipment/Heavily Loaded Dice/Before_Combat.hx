@@ -1,0 +1,1 @@
+self.setvar(~load~|1);
