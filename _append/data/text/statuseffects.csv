@@ -3,7 +3,7 @@ permafrost,Permafrost,ice,Receive [ice]<value> freeze next turn.,NO,YES,NO,NO,NO
 block,Blocked,lock,Cannot use [lock]<value> dice next turn.,NO,YES,NO,NO,NO
 bonus,Bonus_Turn,confuse,Take an extra turn next turn.,NO,YES,NO,NO,NO
 damageup,Extra_Damage,extra,Deal [sword]<value> more damage with each hit.,NO,YES,NO,NO,NO
-bloodpact,Blood_Pact,heart,Damage dealt to you is also dealt to your opponent.,NO,YES,YES,NO,NO
+bloodpact,Blood_Pact,heart,Damage dealt to you is also dealt to your opponent.,NO,YES,NO,YES,NO
 deathsoon,Death_is_Coming,curse,You will die in [curse]<value> turns.,NO,YES,NO,NO,NO
 blinddice,Blinded_Dice,blind,<value> dice are permanently blinded,NO,YES,NO,NO,NO
 dicelock_1,Dice_Lock_1,lock,You cannot roll a 1 for the rest of the fight.,NO,NO,NO,NO,NO
@@ -21,3 +21,16 @@ heavyloaded_5,Heavily_Loaded_5,dice,All your dice are 5s!,NO,NO,NO,NO,NO
 heavyloaded_6,Heavily_Loaded_6,dice,All your dice are 6s!,NO,NO,NO,NO,NO
 stolen,Stolen_Dice,dice,You stole <value> dice!,NO,YES,NO,NO,YES
 smashed,Smashed!,sword,You've broken <value> of your equipment next turn!,NO,YES,NO,NO,NO
+gambit_1,Gambit!_1,dice,You've bet on rolling <value> 1s next turn!,NO,YES,NO,NO,NO
+gambit_2,Gambit!_2,dice,You've bet on rolling <value> 2s next turn!,NO,YES,NO,NO,NO
+gambit_3,Gambit!_3,dice,You've bet on rolling <value> 3s next turn!,NO,YES,NO,NO,NO
+gambit_4,Gambit!_4,dice,You've bet on rolling <value> 4s next turn!,NO,YES,NO,NO,NO
+gambit_5,Gambit!_5,dice,You've bet on rolling <value> 5s next turn!,NO,YES,NO,NO,NO
+gambit_6,Gambit!_6,dice,You've bet on rolling <value> 6s next turn!,NO,YES,NO,NO,NO
+spatulambit_1,Gambit!_1,dice,You've bet on rolling <value> 1s next turn!,NO,YES,NO,NO,NO
+spatulambit_2,Gambit!_2,dice,You've bet on rolling <value> 2s next turn!,NO,YES,NO,NO,NO
+spatulambit_3,Gambit!_3,dice,You've bet on rolling <value> 3s next turn!,NO,YES,NO,NO,NO
+spatulambit_4,Gambit!_4,dice,You've bet on rolling <value> 4s next turn!,NO,YES,NO,NO,NO
+spatulambit_5,Gambit!_5,dice,You've bet on rolling <value> 5s next turn!,NO,YES,NO,NO,NO
+spatulambit_6,Gambit!_6,dice,You've bet on rolling <value> 6s next turn!,NO,YES,NO,NO,NO
+sleep,Asleep,curse,You're asleep for <value> turns!,NO,YES,NO,NO,NO

@@ -1,8 +1,11 @@
-# inflictself()
+# inflict()
 ## Description
-Inflict a status on yourself.
+Inflict a status on your opponent.
 
 ## Usage
+`inflict(STATUSNAME, amount);`
+
+### Self Version
 `inflictself(STATUSNAME, amount);`
 
 > Note: Use | (pipes) instead of commas in equipment.csv, they automatically convert to commas when loaded.
