@@ -1,6 +1,6 @@
 # inflict()
 ## Description
-Inflict a status on your opponent.
+Inflict a status on your opponent (use `inflictself()` to inflict a status on yourself).
 
 ## Usage
 `inflict(STATUSNAME, amount);`
