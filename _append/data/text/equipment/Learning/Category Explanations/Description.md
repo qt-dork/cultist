@@ -25,3 +25,7 @@ Name | Description | Example
 `[ice]` | A cyan ice cube icon! Text following it is cyan. Should be placed before freeze values. | `Freeze [ice]3 dice`
 `[fire]` | A flame icon! Text following it is red. Should be placed before burn values. | `Burn [fire]3 dice`
 `[dice]` | A dice icon! Text following it is white. I don't think should ever be used? It's used only once in Marmalade | `Get a [dice]6 next turn`
+
+[blind], [confuse], [curse], [d], [dice], [fire], [fury], [gold], [gray], [heal], [heart], [ice], [lock], [jinx], [mana], [poison], [reduce], [shield], [shock], [sword], [thorns], [vanish], [weaken]
+
+Thanks to hunkydory for giving a description of all the possible values on the dicecord!

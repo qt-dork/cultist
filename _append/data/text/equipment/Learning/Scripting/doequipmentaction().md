@@ -1,0 +1,1 @@
+e.doequipmentaction(self|target|e.castdirection|[]|-1|true);
