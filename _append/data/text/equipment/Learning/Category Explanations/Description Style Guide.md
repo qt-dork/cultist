@@ -110,7 +110,7 @@ Have you ever wanted to make sure your wording in descriptions is just right? Yo
 ### Unique Verbs
 When coming up with your own unique statuses that use their own verbs, try following these rules to figure out how to describe the action.
 1. Does this status stack? Statuses that don't stack usually use their name as their verb.
-    * Example: "\[silence]Silence enemy".
+    * Example: "Silence enemy".
 2. What does this status interact with? Statuses that interact with dice or equipment usually use their name as their verb.
     * Example: "Freeze \[ice]4 dice" or "Weaken \[weaken]4 equipment".
 3. If this status interacts with the enemy or yourself, think about how this interaction occurs. Statuses that usually do something to someone use their names as verbs.
