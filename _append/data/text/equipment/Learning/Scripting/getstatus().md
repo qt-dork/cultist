@@ -7,6 +7,7 @@ Check to see how much of a certain status a target have. Returns an int. When us
 
 ### Self Version
 `getstatusself(STATUSNAME);`
+> This checks the person using the equipment instead of the opponent.
 
 ### Status Name
 The name of the status you're checking to see if the you have. Use all caps for existing statuses, and surround it in quotes (tildas in .csv) for custom statuses.

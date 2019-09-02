@@ -3,7 +3,7 @@ var acceptable = [];
 var banned = [];
 var banall = false;
 for (i in 1...7) {
-    if (getstatusself(~dicelock_~ + i) > 0) {
+    if (getstatusself("dicelock_" + i) > 0) {
         banned.push(i);
     } 
     else { 

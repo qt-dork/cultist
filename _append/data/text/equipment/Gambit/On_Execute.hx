@@ -1,1 +1,0 @@
-inflictself(~gambit_~+d|1);

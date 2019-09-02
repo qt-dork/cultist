@@ -1,0 +1,1 @@
+self.setvar(~charging~|(target.maxhp - (target.maxhp%2)) /2);

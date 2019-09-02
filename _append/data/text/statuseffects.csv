@@ -34,3 +34,5 @@ spatulambit_4,Gambit!_4,dice,You've bet on rolling <value> 4s next turn!,NO,YES,
 spatulambit_5,Gambit!_5,dice,You've bet on rolling <value> 5s next turn!,NO,YES,NO,NO,NO
 spatulambit_6,Gambit!_6,dice,You've bet on rolling <value> 6s next turn!,NO,YES,NO,NO,NO
 sleep,Asleep,curse,You're asleep for <value> turns!,NO,YES,NO,NO,NO
+permafury,Permanent_Fury,fury,Permanent fury.,NO,NO,NO,NO,YES
+dicecard,Discard,dice,Throw out a dice next turn.,NO,YES,NO,NO,YES

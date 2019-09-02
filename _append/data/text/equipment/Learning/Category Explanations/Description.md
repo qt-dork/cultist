@@ -12,15 +12,17 @@ You can include `self.setvar()`-styled variables in it using `<var:name>`!
 ## Symbols You Can Use
 Name | Description | Example
 --- | --- | ---
-`<d6>` | an outlined d6 | `Deal [sword]<d6> damage`
-`<double>` | 2x an outlined d6 | `Deal [sword]<double> damage`
-`<triple>` | 3x an outlined d6 | `Deal [sword]<triple> damage`
-`<quadruple>` | 4x an outlined d6 | `Deal [sword]<quadruple> damage`
-`[sword]` | A sword icon! Text following it is white. Should be placed before damage values. | `Deal [sword]<d6> damage`
-`[shield]` | A shield icon! Text following it is orange. Should be placed before values that indicates how much shield you'll gain. | `Give yourself [shield]<d6> shield`
+`<d6>` | an outlined d6 | `Do [sword]<d6> damage`
+`<double>` | 2x an outlined d6 | `Do [sword]<double> damage`
+`<triple>` | 3x an outlined d6 | `Do [sword]<triple> damage`
+`<quadruple>` | 4x an outlined d6 | `Do [sword]<quadruple> damage`
+`<quintuple>` | 5x an outlined d6 | `Do [sword]<quintuple> damage`
+`<var:variable>` | Outputs the value of a variable | `Do [sword]<var:sworduse> damage`
+`[sword]` | A sword icon! Text following it is white. Should be placed before damage values. | `Do [sword]<d6> damage`
+`[shield]` | A shield icon! Text following it is orange. Should be placed before values that indicates how much shield you'll gain. | `Add [shield]<d6> shield`
 `[heart]` | A heart icon! Text following it is red. Should be placed before health drain and siphon values. | `Drain [heart]<d6> health`
 `[lock]` | A lock icon! Text following it is white. Should be placed before values that indicate how much lock you're dealing. | `Lock [lock]2 equipment`
-`[heal]` | A green plus icon! Text following it is green. Should be placed before healing values. | `Heal [heal]<d6> health`
+`[heal]` | A green plus icon! Text following it is green. Should be placed before healing values. | `Restore [heal]<d6> health`
 `[poison]` | A poisonous bubble icon! Text following it is purple. Should be placed before poison values. | `Inflict [poison]4 poison`
 `[ice]` | A cyan ice cube icon! Text following it is cyan. Should be placed before freeze values. | `Freeze [ice]3 dice`
 `[fire]` | A flame icon! Text following it is red. Should be placed before burn values. | `Burn [fire]3 dice`
