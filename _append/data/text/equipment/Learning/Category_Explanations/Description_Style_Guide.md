@@ -7,21 +7,21 @@ Have you ever wanted to make sure your wording in descriptions is just right? Yo
     * Example: Pierce Spell says "Ignore shields" instead of "Gain pierce". This phrasing is more clear to the user as to what the equipment does.
     * The exception to this rule is when you're introducing an effect in simple equipment that then gets used in more complicated equipment (e.g. Fury is introduced as "Repeat next attack" but then later is phrased as "10% chance of Fury").
 2. Equipment descriptions should be as simple and to the point as possible. 
-2. Equipment should always use the numeral form of numbers over their word form.
+3. Equipment should always use the numeral form of numbers over their word form.
     * The exception to this rule is when referring to dice values that are being rolled (e.g. "Roll 2 sixes").
     * And also when the article "a" could reasonably be used.
     * And also when the word "ALL" is used instead.
-3. Try to be as descriptive as possible of what the equipment does. The equipment should not leave the player thinking that the equipment will do something that it doesn't do.
-4. Keep in mind localization of descriptions when writing. Don't try to do too much fancy wordplay that could be hard to translate or references to common saying in English that might not exist in other cultures. 
-5. If an equipment interacts with variables that will change value throughout the fight and knowledge of the variable is useful to the player, list the current state in the equipment description.
+4. Try to be as descriptive as possible of what the equipment does. The equipment should not leave the player thinking that the equipment will do something that it doesn't do.
+5. Keep in mind localization of descriptions when writing. Don't try to do too much fancy wordplay that could be hard to translate or references to common saying in English that might not exist in other cultures. 
+6. If an equipment interacts with variables that will change value throughout the fight and knowledge of the variable is useful to the player, list the current state in the equipment description.
     * You can do this in the description using `<var:variable>`.
     * A useful way to convey this to the player is with a phrase like "(Currently at `<var:variable>`!)").
-6. Symbols (e.g. \[heart], \[ice], \[fire]) should precede the number, and not the verb.
+7. Symbols (e.g. \[heart], \[ice], \[fire]) should precede the number, and not the verb.
     * Do "Burn \[fire]4 dice" instead of "\[fire]Burn 4 dice".
     * You can see a full list of symbols over in the [Description](./Description.md) page.
-7. Symbols should touch the number to make sure the number is colored.
+8. Symbols should touch the number to make sure the number is colored.
     * Do "Burn \[fire]4 dice" instead of "Burn \[fire] 4 dice".
-8. Try to avoid end of turn effects on equipment due to used equipment not being able to execute code.
+9. Try to avoid end of turn effects on equipment due to used equipment not being able to execute code.
 
 ## Nouns
 1. Always refer to the opponent as "enemy". Do not capitalize any part of enemy unless it's in the beginning of the sentence.
@@ -54,10 +54,10 @@ Have you ever wanted to make sure your wording in descriptions is just right? Yo
 8. Use the verb "Recover" when the equipment heals the user.
     * Do "Recover \[heal]4 health" instead of "Heal \[heal]4 health".
 9. Equipment that give the player more temporary dice should say "+1 dice this fight".
-26. Use the verb "Reduce" when the equipment gives you the reduce status.
+10. Use the verb "Reduce" when the equipment gives you the reduce status.
     * Do "Reduce \[reduce]4 damage from each attack" instead of "Inflict \[reduce]4 reduce".
     * To save space, you can use the verb "Gain" instead (e.g. "Gain \[reduce]4 reduce").
-10. Use the verb "Roll" when the equipment rolls dice.
+11. Use the verb "Roll" when the equipment rolls dice.
     * Do "Roll 4 dice" instead of "Give 4 dice" or "Get 4 dice".
     * This includes when the equipment rolls specific numbers ("Roll a four").
 12. Use the verb "Reroll" when the equipment rerolls existing dice.
@@ -69,43 +69,43 @@ Have you ever wanted to make sure your wording in descriptions is just right? Yo
     * This is an exception to the "Symbols should precede numbers" rule.
 15. If the equipment shocks more than 1 equipment, then use the phrase "Shock \[shock]\(number) equipment"
     * Do "Shock \[shock]4 equipment" instead of "Inflict \[shock]4 shock" or "+\[shock]4 shock" or "\[shock]4 shock".
-20. Use the phrase "\[weaken]Weakens enemy" when the equipment weakens only 1 equipment.
+16. Use the phrase "\[weaken]Weakens enemy" when the equipment weakens only 1 equipment.
     * Do "\[weaken]Weakens enemy" instead of "Inflict \[weaken]1 weaken".
     * This is an exception to the "Symbols should precede numbers" rule.
-16. If the equipment weakens more than 1 equipment, then use the phrase "Weaken \[weaken]\(number) equipment"
+17. If the equipment weakens more than 1 equipment, then use the phrase "Weaken \[weaken]\(number) equipment"
     * Do "Weaken \[weaken]4 equipment" instead of "Inflict \[weaken]4 weaken".
-15. Use the verb "Discharge" when the equipment interacts with the charge variable in any way.
+18. Use the verb "Discharge" when the equipment interacts with the charge variable in any way.
     * Do "Discharge \[sword]\<charge> damage" instead of "Do \[sword]\<charge> damage" or "Release \[sword]\<charge> as damage".
-16. Use the verb "Drain" when the equipment does damage to the enemy and restores just as much health to you. Drain also uses the \[heart] symbol instead of the \[sword] symbol.
+19. Use the verb "Drain" when the equipment does damage to the enemy and restores just as much health to you. Drain also uses the \[heart] symbol instead of the \[sword] symbol.
     * Do "Drain \[heart]4 health" instead of "Drain \[sword]4 health" or Drain \[heart]4 damage" or "Do \[sword]4 damage and heal it as health".
-17. Use the verb "Blind" when the equipment blinds dice.
+20. Use the verb "Blind" when the equipment blinds dice.
     * Do "Blind \[blind]4 dice" instead of "Inflict \[blind]4 blind" or "\[blind]Blind enemy".
-18. Use the verb "Lock" when the equipment locks dice.
+21. Use the verb "Lock" when the equipment locks dice.
     * Do "Lock \[lock]4 dice" instead of "Inflict \[lock]4 lock".
-19. Use the phrase "Return the dice" when the equipment gives you back the dice.
+22. Use the phrase "Return the dice" when the equipment gives you back the dice.
     * Do "Return the dice" instead of "Get the dice back".
-21. Use the verb "Curse" when the equipment curses someone.
+23. Use the verb "Curse" when the equipment curses someone.
     * Do "Curse enemy" or "Curse yourself" instead of "Inflicts 1 curse".
-22. Use the verb "Silence" when the equipment silences someone.
+24. Use the verb "Silence" when the equipment silences someone.
     * Do "Silence enemy" or "Silence yourself" instead of "Inflicts 1 silence".
-23. Use the verb "Split" when the equipment splits dice. If you are unsure if your equipment splits a dice, check the equipment script and see if it calls the [split()](../Scripting/split().md) function.
+25. Use the verb "Split" when the equipment splits dice. If you are unsure if your equipment splits a dice, check the equipment script and see if it calls the [split()](../Scripting/split().md) function.
     * Do "Split a dice" instead of "Cut a dice in half".
-24. Use the phrase "Increase (object) by (number)"/"Reduce (object) by (number)" if the equipment modifies a value outside of the dice value.
+26. Use the phrase "Increase (object) by (number)"/"Reduce (object) by (number)" if the equipment modifies a value outside of the dice value.
     * Do "Reduce CPU counter by 4" instead of "Decrement CPU counter by 4"
     * To save space, you can instead use the phrase "(object) +/-(number)" (e.g. "CPU counter +4").
-25. Use the verb "Gain" when the equipment adds thorns.
+27. Use the verb "Gain" when the equipment adds thorns.
     * Do "Gain \[thorns]4 thorns" instead of "Add \[thorns]4 thorns".
-27. Use the phrase "In (number) turns..." when your equipment uses jinx.
+28. Use the phrase "In (number) turns..." when your equipment uses jinx.
     * Do "In \[jinx]4 turns, do \[sword]4 damage" instead of "Do \[sword]4 damage in \[jinx]4 turns" or "Jinx \[jinx]4: Do \[sword]4 damage". 
-28. Use the verb "Duplicate" when the equipment duplicates dice.
+29. Use the verb "Duplicate" when the equipment duplicates dice.
     * Do "Duplicate a dice" instead of "Roll a copy of this dice" or "Give a copy of this dice".
-29. Use the phrase "Cost: \[mana](number)" when an equipment costs mana to use.
-30. Use the phrase "If \[mana](number) >/>=/</<= (number):" when an equipment has an additional effect if you have a certain amount of mana.
-31. Use the phrase "Start of turn:" for start of turn effects on equipment.
-32. Use the verb "Use" when referring to equipment being used.
-33. Use the verb "Cast" when referring to Witch's spells being used.
-34. Use the verb "Play" when referring to Jester's cards being used.
-32. Ignore all other verb rules if the equipment modifies a value by doubling, tripling, quadrupling, or quintupling it. Instead use the verb "Double"/"Triple"/"Quadruple"/"Quintuple".
+30. Use the phrase "Cost: \[mana](number)" when an equipment costs mana to use.
+31. Use the phrase "If \[mana](number) >/>=/</<= (number):" when an equipment has an additional effect if you have a certain amount of mana.
+32. Use the phrase "Start of turn:" for start of turn effects on equipment.
+33. Use the verb "Use" when referring to equipment being used.
+34. Use the verb "Cast" when referring to Witch's spells being used.
+35. Use the verb "Play" when referring to Jester's cards being used.
+36. Ignore all other verb rules if the equipment modifies a value by doubling, tripling, quadrupling, or quintupling it. Instead use the verb "Double"/"Triple"/"Quadruple"/"Quintuple".
 
 ### Unique Verbs
 When coming up with your own unique statuses that use their own verbs, try following these rules to figure out how to describe the action.
