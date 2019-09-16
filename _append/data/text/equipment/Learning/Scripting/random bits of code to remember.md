@@ -1,5 +1,9 @@
 addjestercard(~juggling ball~); self.changebattlevar(~jugglingballs~| 1);
 
+if(self.roll_total%2 == 0){ e.castdirection = 1; }else{ e.castdirection = 0; };
+
+e always refers to the item you're calling the script from, whereas eq is just a variable name
+So for example, trace(e.name) in an equipment's script would get you the equipment's name, but for(eq in self.equipment){trace(eq.name);}; would trace the names of all your equipment
 
 function floordiv(x|y){var t = 0; while (x>0) {x-=y; t++;} return t; } var tot=0; var count=0; var ava=[]; for (mydice in self.dicepool) { if (mydice.available()) { tot+= mydice.basevalue; count++; ava.push(mydice; } } var del = 0; for (mydice in ava) { trace(tot); trace(count); trace(~~); del+=0.05; mydice.animatereroll(floordiv(tot|count)|self.screenposition()|del); tot-=floordiv(tot|count); count--;
 
